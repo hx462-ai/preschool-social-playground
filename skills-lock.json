@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "html-game-generator": {
+      "source": "buildfastwithai/gen-ai-experiments",
+      "sourceType": "github",
+      "skillPath": "skills/html-game-generator/SKILL.md",
+      "computedHash": "f0385a9e0824f5b7697cc5d6fc6bb466eaf05e6b745a8a080f2dbfc75ef00075"
+    },
     "kids-picture-book": {
       "source": "jingk1012-ux/picture-book-skill",
       "sourceType": "github",
