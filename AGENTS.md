@@ -46,7 +46,7 @@
 - 另补入来源仓库根目录 MIT `LICENSE`，与上述提交一致。该 skill 来源子目录本身没有 assets 或 scripts，不创建虚构的配套文件。
 - 项目 `skills-lock.json` 新增同源条目；原有 kids-picture-book 条目保留。
 
-## Colorfigures 下载受阻记录（尚未安装）
+## Colorfigures 安装记录
 
 - 指定官方下载包：https://april-zhu.com/colorfigures/colorfigures.tar.gz
 - 执行命令：
@@ -63,6 +63,10 @@
   ```
 
 - 诊断结果：代理响应 `HTTP/1.1 403 Forbidden`，退出码 `56`，`curl: (56) CONNECT tunnel failed, response 403`。受阻域名为 `april-zhu.com`，当前环境网络允许列表不包含该域名。
-- 未取得官方包，无法记录包校验值、核对包内文件或读取项目级安装后的 SKILL.md；未创建 `.agents/skills/colorfigures/`，不将会话中可读取的 Colorfigures 说明视为项目安装。
-- 后续需通过环境网络配置允许访问 `april-zhu.com`，或取得用户提供的完整官方下载包，再检查归档、计算 SHA-256、读取内容并安装；完整保留 SKILL.md、assets、scripts、LICENSE 及其他配套文件。
-- 当前开发准备仅部分完成，等待 Colorfigures 下载条件恢复；不开始产品开发。
+- 先前代理失败的诊断命令及错误见 Git 历史；该问题已通过本次用户提供的归档解决。
+- 本次从用户提供的官方归档安装：`/tmp/codex-remote-attachments/01a1780d-5c36-7612-9a5e-f869ed49308f/4b619639-bb0a-4f8c-9964-bbfbb6675dca/1-colorfigures.tar.gz`。
+- 下载包 SHA-256：`b74809acd591a7f209c8ba964b0b29bb050a953328aa6577581e6778d26257ff`。
+- 安装前确认项目级、`~/.agents/skills`、`~/.codex/skills` 都没有 `colorfigures`，因此新建 `.agents/skills/colorfigures/`；未覆盖其他 skill。
+- 归档完整性及路径检查通过：所有成员都在 `colorfigures/` 内，无绝对路径或 `..` 路径。安装后读取项目级 `SKILL.md`，frontmatter 为 `name: colorfigures`。
+- 已保留归档中全部 8 个文件：`SKILL.md`、`README.md`、`LICENSE`、`assets/core.js`、`assets/examples/{claw,lamp,toaster}.html`、`scripts/build.py`。
+- 当前开发准备完成；产品开发须等用户明确发出开始指令。
