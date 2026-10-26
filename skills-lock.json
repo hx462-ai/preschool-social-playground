@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "kids-picture-book": {
+      "source": "jingk1012-ux/picture-book-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "d146eb1a0b41cdbbc065caf33fd3707e0a7b40abf48460636c424b7ad285f054"
+    }
+  }
+}
